@@ -67,7 +67,7 @@ export default class Question extends Page_comp {
         }
         
         } else{
-          window.location.href = "https://zoodefis.netlify.app/#/dejatrouver";
+          window.location.href = "https://spacific-zoo-paques.netlify.app/#/dejatrouver";
           console.log(localStorage);
           
 
