@@ -36,7 +36,7 @@ export default class Question extends Page_comp {
       total = getTotalQuestions();
 
       if(total == 10){
-        window.location.href = "genially";
+        window.location.href = "https://spacific-zoo-paques.netlify.app/#/resultat";
       }
 
       if (id && reponseQuestionParId.has(id)) {
