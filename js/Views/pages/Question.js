@@ -111,13 +111,13 @@ export default class Question extends Page_comp {
 //sans score 
 
 
-//  https://zoodefis.netlify.app/#/question?id=Y0XD04dQY8
-//  https://zoodefis.netlify.app/#/question?id=4LsA2_Oku1
-//  https://zoodefis.netlify.app/#/question?id=xtqpP5Bds1
-//  https://zoodefis.netlify.app/#/question?id=aoUIwJCVtr
-//  https://zoodefis.netlify.app/#/question?id=pfUnU_fEsR
-//  https://zoodefis.netlify.app/#/question?id=lIoQ9plaaF
-//  https://zoodefis.netlify.app/#/question?id=6yVjOqskO~
-//  https://zoodefis.netlify.app/#/question?id=Pu6Cog495.
-//  https://zoodefis.netlify.app/#/question?id=Ii4NHw5aWd
-//  https://zoodefis.netlify.app/#/question?id=fNKzp-kTNE
+//  https://spacific-zoo-paques.netlify.app/#/question?id=Y0XD04dQY8
+//  https://spacific-zoo-paques.netlify.app/#/question?id=4LsA2_Oku1
+//  https://spacific-zoo-paques.netlify.app/#/question?id=xtqpP5Bds1
+//  https://spacific-zoo-paques.netlify.app/#/question?id=aoUIwJCVtr
+//  https://spacific-zoo-paques.netlify.app/#/question?id=pfUnU_fEsR
+//  https://spacific-zoo-paques.netlify.app/#/question?id=lIoQ9plaaF
+//  https://spacific-zoo-paques.netlify.app/#/question?id=6yVjOqskO~
+//  https://spacific-zoo-paques.netlify.app/#/question?id=Pu6Cog495.
+//  https://spacific-zoo-paques.netlify.app/#/question?id=Ii4NHw5aWd
+//  https://spacific-zoo-paques.netlify.app/#/question?id=fNKzp-kTNE
