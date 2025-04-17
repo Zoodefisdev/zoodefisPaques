@@ -1,6 +1,6 @@
 import Page_comp from "../composants/pagecomposer.js";
 import getTotalQuestions from "../../utils/Scorestotal.js";
-
+import {ENDPOINT}  from "../../configs.js";
 // Dictionnaire des réponses par ID
 let reponseQuestionParId = new Map([
   ["Y0XD04dQY8", "phrase 1"],
@@ -10,7 +10,7 @@ let reponseQuestionParId = new Map([
   ["pfUnU_fEsR", "phrase 5"],
   ["lIoQ9plaaF", "phrase 6"],
   ["6yVjOqskO~", "phrase 7"],
-  ["Pu6Cog495.", "phrase 8"],
+  ["Pu6Cog495", "phrase 8"],
   ["Ii4NHw5aWd", "phrase 9"],
   ["fNKzp-kTNE", "phrase 10"]
 ]);
@@ -36,7 +36,7 @@ export default class Question extends Page_comp {
       total = getTotalQuestions();
 
       if(total == 10){
-        window.location.href = "https://spacific-zoo-paques.netlify.app/#/resultat";
+        window.location.href = "genially";
       }
 
       if (id && reponseQuestionParId.has(id)) {
@@ -63,11 +63,11 @@ export default class Question extends Page_comp {
         total = getTotalQuestions();
 
         if(total == 10){
-          window.location.href = "genially";
+          window.location.href = `${ENDPOINT}#/resultat`;
         }
         
         } else{
-          window.location.href = "https://spacific-zoo-paques.netlify.app/#/dejatrouver";
+          window.location.href = `${ENDPOINT}#/dejatrouver`;
           console.log(localStorage);
           
 
@@ -81,22 +81,24 @@ export default class Question extends Page_comp {
 
       if (total === 0) {
         return Page_comp.renderPage(() => `
-          <section class="main-content">
             <h2>Réponse :</h2>
             <p>${reponse}</p>
-          </section>
         `);
       } 
       
       else {
         return Page_comp.renderPage(() => `
-          <section class="main-content">
             <h2>Réponse :</h2>
             <p>${reponse}</p>
+            <div class="explosion">
+              <div class="piece piece1"></div>
+              <div class="piece piece2"></div>
+              <div class="piece piece3"></div>
+              <div class="piece piece4"></div>
+            </div>
             <div class="score-box">
                 Oeuf total : <span id="scoreDisplay">${total}/10</span>
             </div>
-            </section>
         `);
 
       }
@@ -108,16 +110,29 @@ export default class Question extends Page_comp {
 //avec score 
 // retour = https://zoodefis.netlify.app/#/question?id=5&score=3
 
+
+
 //sans score 
+//  https://zoodefis.netlify.app/#/question?id=Y0XD04dQY8
+//  https://zoodefis.netlify.app/#/question?id=4LsA2_Oku1
+//  https://zoodefis.netlify.app/#/question?id=xtqpP5Bds1
+//  https://zoodefis.netlify.app/#/question?id=aoUIwJCVtr
+//  https://zoodefis.netlify.app/#/question?id=pfUnU_fEsR
+//  https://zoodefis.netlify.app/#/question?id=lIoQ9plaaF
+//  https://zoodefis.netlify.app/#/question?id=6yVjOqskO~
+//  https://zoodefis.netlify.app/#/question?id=Pu6Cog495.
+//  https://zoodefis.netlify.app/#/question?id=Ii4NHw5aWd
+//  https://zoodefis.netlify.app/#/question?id=fNKzp-kTNE
 
 
-//  https://spacific-zoo-paques.netlify.app/#/question?id=Y0XD04dQY8
-//  https://spacific-zoo-paques.netlify.app/#/question?id=4LsA2_Oku1
-//  https://spacific-zoo-paques.netlify.app/#/question?id=xtqpP5Bds1
-//  https://spacific-zoo-paques.netlify.app/#/question?id=aoUIwJCVtr
-//  https://spacific-zoo-paques.netlify.app/#/question?id=pfUnU_fEsR
-//  https://spacific-zoo-paques.netlify.app/#/question?id=lIoQ9plaaF
-//  https://spacific-zoo-paques.netlify.app/#/question?id=6yVjOqskO~
-//  https://spacific-zoo-paques.netlify.app/#/question?id=Pu6Cog495.
-//  https://spacific-zoo-paques.netlify.app/#/question?id=Ii4NHw5aWd
-//  https://spacific-zoo-paques.netlify.app/#/question?id=fNKzp-kTNE
+
+//  http://localhost:8080/#/question?id=Y0XD04dQY8
+//  http://localhost:8080/#/question?id=4LsA2_Oku1
+//  http://localhost:8080/#/question?id=xtqpP5Bds1
+//  http://localhost:8080/#/question?id=aoUIwJCVtr
+//  http://localhost:8080/#/question?id=pfUnU_fEsR
+//  http://localhost:8080/#/question?id=lIoQ9plaaF
+//  http://localhost:8080/#/question?id=6yVjOqskO~
+//  http://localhost:8080/#/question?id=Pu6Cog495.
+//  http://localhost:8080/#/question?id=Ii4NHw5aWd
+//  http://localhost:8080/#/question?id=fNKzp-kTNE
