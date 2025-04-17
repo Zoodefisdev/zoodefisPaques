@@ -1,1 +1,0 @@
-export const ENDPOINT = "https://zoodefis.netlify.app/"; //changer avec app
