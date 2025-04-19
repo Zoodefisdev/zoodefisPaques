@@ -23,7 +23,7 @@ export default class Question extends Page_comp {
   async render() {
     
     const queryString = window.location.hash.split("?")[1];
-    let reponse = "Comment on en est arriver la ?";
+    let reponse = "il reste encore des oeufs !";
     let id = null;
     let score = null;
     let total = 0;
@@ -80,25 +80,31 @@ export default class Question extends Page_comp {
     }
 
       if (total === 0) {
+        total = getTotalQuestions();
         return Page_comp.renderPage(() => `
-            <h2>Réponse :</h2>
+          <h3> La chasse n'est pas terminé</h3>
+       
+            <div class="score-box">
+                🐰  Oeuf total : <span id="scoreDisplay">${total}/10 🥚</span>
+            </div>
             <p>${reponse}</p>
+            <img class = "oeufquigigotte"    src="../../asset/sunflower-easter-egg-watercolor-png-5692308.png" alt="oeufquigigotte">
         `);
       } 
       
       else {
         return Page_comp.renderPage(() => `
-            <h2>Réponse :</h2>
-            <p>${reponse}</p>
+            <h3>Réponse : ${reponse}</h3>
+            <div class="score-box">
+                🐰  Oeuf total : <span id="scoreDisplay">${total}/10 🥚</span>
+            </div>
+            <img class = "oeufquigigotte"    src="../../asset/sunflower-easter-egg-watercolor-png-5692308.png" alt="oeufquigigotte">
+            
             <div class="explosion">
               <div class="piece piece1"></div>
               <div class="piece piece2"></div>
-              <div class="piece piece3"></div>
-              <div class="piece piece4"></div>
             </div>
-            <div class="score-box">
-                Oeuf total : <span id="scoreDisplay">${total}/10</span>
-            </div>
+
         `);
 
       }
